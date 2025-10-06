@@ -73,7 +73,7 @@ export const doctors: Doctor[] = [
         id: "Dr. Abuchi-Okaro",
         name: "Dr. Abuchi Okaro",
         specialty: ["Bariatric & Weight Loss Surgery", "Gastroenterology", "General Surgery"],
-        image: "/doctors/Dr-abuchi.jpg",
+        image: "/doctors/Dr-abuchi.jpeg",
         title: "Consultant General, Lap Upper GI & Bariatric Surgeon",
         bio: "Dr Abuchi Okaro is a consultant General, Laparoscopic Bariatric and UGI surgeon at Euracare, he is well recognised for his expertise in minimally invasive weight-loss and gastrointestinal surgery. He holds advanced surgical qualifications from both the UK and Japan and serves as a consultant at leading UK private healthcare institutions such as the Wellington Hospital in London and the Benenden Hospital in Kent. ",
         bio2: "Dr Okaro blends international medical training with compassionate patient care to lead Euracare’s gastrointestinal and surgical weight loss specialists healthcare services. He is the founder and president of the Bariatric and Metabolic Surgeon Society of Nigeria (BMSSN)",

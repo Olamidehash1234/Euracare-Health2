@@ -1,87 +1,10 @@
 import { useState } from 'react';
-
-const boardMembers = [
-    {
-        id: 1,
-        name: "Dr Tosin Majekodunmi",
-        position: "Managing Director & Medical Director & Chief of Cardiology ",
-        image: "/doctors/Dr-tosin.jpg"
-    },
-    // {
-    //     id: 3,
-    //     name: "Ms. Fatima Bello",
-    //     position: "Director",
-    //     image: "/about/board3.png"
-    // },
-    // {
-    //     id: 4,
-    //     name: "Prof. Samuel Okafor",
-    //     position: "Director",
-    //     image: "/about/board4.png"
-    // }
-];
-
-const teamMembers = [
-    {
-        id: 1,
-        name: "Dr Tosin Majekodunmi",
-        position: "Managing Director & Medical Director & Chief of Cardiology ",
-        image: "/doctors/Dr-tosin.jpg"
-    },
-    {
-        id: 2,
-        name: "Ijeoma Okoro",
-        position: "HR Manager",
-        image: "/about/team/ijeoma.jpg"
-    },
-    {
-        id: 3,
-        name: "Olukemi Fasuan",
-        position: "Financial Controller ",
-        image: "/about/team/Mrs-Kemi.jpeg"
-    },
-    {
-        id: 4,
-        name: "Evans Esezobor",
-        position: "IT Manager",
-        image: "/about/team/evans.jpg"
-    },
-    {
-        id: 5,
-        name: "Sylvester Shih",
-        position: "Chief Operating Officer",
-        image: "/about/team/sylvester.jpg"
-    },
-    {
-        id: 6,
-        name: " Kelvin Ajieh",
-        position: "Marketing and Communications Manager",
-        image: "/about/team/kelvin.jpg"
-    },
-    {
-        id: 7,
-        name: "Godwin Ikehi",
-        position: "Laboratory Manager",
-        image: "/about/team/godwin.jpg"
-    },
-    {
-        id: 8,
-        name: "Abimbola Aransiola",
-        position: "Pharmacy Manager",
-        image: "/about/team/abimbola.jpg"
-    },
-    {
-        id: 9,
-        name: "",
-        position: "Nursing Manager",
-        image: "/about/team/nm.jpeg"
-    }
-];
+import { teamMembers } from '../../data/team';
+import TeamMemberModal from '../../components/TeamMemberModal';
+import type { TeamMember } from '../../data/team';
 
 const LeadershipTeam = () => {
-    const [activeTab, setActiveTab] = useState('Board of Directors');
-
-    const membersToShow = activeTab === 'Board of Directors' ? boardMembers : teamMembers;
+    const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
     return (
         <div className="bg-[#FEF8F5] py-[40px] px-4 lg:py-20 lg:px-20">
@@ -96,40 +19,22 @@ const LeadershipTeam = () => {
                             A diverse team driven by expertise, compassion, and commitment.
                         </h1>
                     </div>
-
-                    {/* Tab Toggle */}
-                    <div className="inline-flex rounded-[12px] mt-[20px] bg-white overflow-hidden border border-[#000000]">
-                        <button
-                            onClick={() => setActiveTab('Board of Directors')}
-                            className={`px-6 py-3 lg:px-[49px] lg:py-[20px] lg:tracking-[-0.3px] text-[14px] lg:text-[16px] font-medium transition-all duration-100 ${activeTab === 'Board of Directors'
-                                    ? 'bg-[#0C2141] text-white'
-                                    : 'text-[#0C2141] hover:text-gray-900'
-                                }`}
-                        >
-                            Board of Directors
-                        </button>
-                        <button
-                            onClick={() => setActiveTab('Our Team')}
-                            className={`px-6 py-3 lg:px-[78px] lg:py-[20px] text-[14px] lg:text-[16px] lg:tracking-[-0.3px] font-medium transition-all duration-100 ${activeTab === 'Our Team'
-                                    ? 'bg-[#0C2141] text-white'
-                                    : 'text-[#0C2141] hover:text-gray-900'
-                                }`}
-                        >
-                            Our Team
-                        </button>
-                    </div>
                 </div>
 
                 {/* Team Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-[40px]">
-                    {membersToShow.map((member) => (
-                        <div key={member.id} className="group">
+                    {teamMembers.map((member) => (
+                        <div 
+                            key={member.id} 
+                            className="group cursor-pointer"
+                            onClick={() => setSelectedMember(member)}
+                        >
                             {/* Image Container */}
-                            <div className="relative mb-[10px] overflow-hidden rounded-t-[12px] bg-gray-200 h-[390px] lg:h-[370px]">
+                            <div className="relative mb-[10px] overflow-hidden rounded-t-[12px] bg-gray-200 h-[270px] lg:h-[270px]">
                                 <img
                                     src={member.image}
                                     alt={member.name}
-                                    className="h-full w-full object-cover transition-transform duration-300"
+                                    className={`w-full object-cover transition-transform duration-300 ${member.id === 2 ? 'h-full' : ''}`}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -147,6 +52,15 @@ const LeadershipTeam = () => {
                     ))}
                 </div>
             </div>
+
+            {/* Modal */}
+            {selectedMember && (
+                <TeamMemberModal
+                    isOpen={!!selectedMember}
+                    onClose={() => setSelectedMember(null)}
+                    member={selectedMember}
+                />
+            )}
         </div>
     );
 };

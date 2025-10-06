@@ -65,6 +65,16 @@ export default function Navbar() {
                   >
                     International Patient
                   </NavLink>
+                  <div className="h-[1px] bg-[#0C21411A] lg:my-[20px]"></div>
+                  <NavLink
+                    to="/home/news"
+                    className={({ isActive }) =>
+                      `block text-[16px] leading-[20px] hover:text-[#0C2141] ${isActive ? "text-[#0C2141]" : "text-[#02070D]"
+                      }`
+                    }
+                  >
+                    News & Updates
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -145,6 +155,9 @@ export default function Navbar() {
                 </a>
                 <a href="/patient-information/international-patients" className="block text-[15px] text-[#02070D] hover:text-[#0C2141]">
                   International Patient
+                </a>
+                <a href="/home/news" className="block text-[15px] text-[#02070D] hover:text-[#0C2141]">
+                  News & Updates
                 </a>
               </div>
             )}

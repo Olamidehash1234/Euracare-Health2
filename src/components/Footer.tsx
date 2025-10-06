@@ -3,6 +3,37 @@ import { Link } from 'react-router-dom';
 
 type FooterSection = 'about' | 'services' | 'media' | 'contact';
 
+const servicesLinks = [
+  {
+    name: "Interventional Cardiology",
+    path: "/services/dynamic/interventional-cardiology"
+  },
+  {
+    name: "Interventional Radiology",
+    path: "/services/dynamic/interventional-radiology"
+  },
+  {
+    name: "Adult & Pediatric Cardiology",
+    path: "/services/dynamic/adult-pediatric-cardiology"
+  },
+  {
+    name: "Bariatric & Weight Loss Surgery",
+    path: "/services/dynamic/bariatric-weight-loss-surgery"
+  },
+  {
+    name: "General Surgery",
+    path: "/services/dynamic/general-surgery"
+  },
+  {
+    name: "Gastroenterology",
+    path: "/services/dynamic/gastroenterology"
+  },
+  {
+    name: "Orthopedic Surgery",
+    path: "/services/dynamic/orthopedic-surgery"
+  }
+];
+
 const EuracareFooter = () => {
   const [openSections, setOpenSections] = useState({
     about: false,
@@ -89,13 +120,20 @@ const EuracareFooter = () => {
                 {openSections.services ? <img src="/footer/dash.svg" alt="" /> : <span className="text-[32px] font-light">+</span>}
               </span>
             </h3>
-            <ul className={`space-y-[10px] lg:space-y-[16px] mt-[20px] lg:mt-0 ${!openSections.services ? 'hidden lg:block' : ''}`}>
-              <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Cancer care</Link></li>
-              <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Cardiac care</Link></li>
-              <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Neurosciences</Link></li>
-              <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Gynaecology & Obstetrics</Link></li>
-              <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Orthopaedics</Link></li>
-            </ul>
+            <div className={`space-y-[16px] ${!openSections.services ? 'hidden lg:block' : ''}`}>
+              <ul className="space-y-[16px]">
+                {servicesLinks.map((service) => (
+                  <li key={service.path}>
+                    <Link 
+                      to={service.path}
+                      className="text-[16px] text-[#02070D] hover:text-[#0C2141]"
+                    >
+                      {service.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <div className=" block lg:hidden h-[1px] bg-[#01010199] mb-[0px]"></div>
@@ -179,7 +217,7 @@ const EuracareFooter = () => {
 
             {/* Copyright */}
             <div className="text-[#010101] sm:text-center text-[14px] lg:leading-[21px] font-medium lg:tracking-[-0.42px]">
-              <p>Euracare Nigeria. Registration number: XXXXXXXXXXX.  © Copyright 2025 - Euracare Nigeria</p>
+              <p>Euracare Nigeria.  © Copyright 2025 - Euracare Nigeria</p>
             </div>
           </div>
         </div>
