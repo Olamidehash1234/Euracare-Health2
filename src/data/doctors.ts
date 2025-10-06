@@ -88,7 +88,7 @@ export const doctors: Doctor[] = [
         id: "Dr. Kafayah-Ogunsola",
         name: "Dr. Kafayah Ogunsola",
         specialty: ["Psychiatry & Sleep therapy"],
-        image: "",
+        image: "/doctors/Dr-kafayah.jpg",
         title: "Consultant Psychiatrist",
         bio: "Dr. Kafayah Ogunsola is a Consultant Psychiatrist and Therapist. She earned her medical degree (MB; BS) and is a Fellow of the West African College of Physicians (FWACP, Psychiatry). Over the years, she has built a reputation as a highly sought-after mental health and wellness expert, offering treatment for a wide range of psychiatric and psychological conditions. Her vision is to make mental health support easily accessible to individuals, families, and organizations both locally and internationally.",
         bio2: "Dr. Ogunsola is also passionate about workplace mental health. She provides Employee Assistance Programs (EAP), consultancy, and training services to corporate organizations and institutions. She has delivered numerous workplace seminars and webinars on emotional wellness and work-life balance in Nigeria and beyond. To break barriers in mental health advocacy, she has pioneered the use of Nigerian languages (Pidgin, Hausa, Igbo, and Yoruba) and innovative resources such as comic strips to increase awareness and accessibility.",
@@ -171,5 +171,18 @@ export const doctors: Doctor[] = [
         researchInterests: ["Oncoplasty"],
         languages: ["English"],
         specialty: ["Breast Surgery","General Surgery"],
+    },
+    {
+        id: "Dr. Nkemegbunam Kanayo Okoli",
+        name: "Dr. Nkemegbunam Kanayo Okoli",
+        image: "",
+        title: "Consultant Physician & Endocrinologist",
+        bio: "Dr. Nkemegbunam Kanayo Okoli is a highly skilled Consultant Physician and Endocrinologist with extensive experience in diagnosing and managing complex endocrine and internal medicine conditions. A graduate of the University of Benin, he holds a Fellowship from the West African College of Physicians and has worked at reputable institutions including the University of Port Harcourt Teaching Hospital. His clinical expertise spans diabetes care, hormonal disorders, and general internal medicine. At Euracare Nigeria, Dr. Okoli combines evidence-based medicine with a patient-centred approach to deliver exceptional care.",
+        program: ["Internal Medicine", "Endocrinology"],
+        degree: ["MBBS, University of Benin", "MWACP", "FWACP"],
+        education: ["Internal Medicine and Endocrinology training via West African College of Physicians"],
+        researchInterests: ["Endocrinology and Metabolic Health"],
+        languages: ["English"],
+        specialty: ["Endocrinology & Diabetology"],
     }
 ];

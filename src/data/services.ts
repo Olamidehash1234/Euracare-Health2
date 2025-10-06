@@ -25,6 +25,10 @@ export type ServiceData = {
     buttonText?: string;
     testimonialVideoUrl?: string[];
     videoUrls?: string[];
+    additionalProcedureSubtitle?: string;
+    additionalProcedureList?: string[];
+    additionalProcedureSubtitle2?: string;
+    additionalProcedureList2?: string[];
 };
 
 export const services: ServiceData[] = [
@@ -465,7 +469,33 @@ export const services: ServiceData[] = [
         description: "Our Neurology and Neurosurgery team diagnoses and treats conditions of the brain, spine, and nervous system. From migraines to complex neurosurgical procedures, we provide integrated, patient-centered care.",
         image: "/home/neuro.jpg",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+        overviewText: "Euracare’s Neurology & Neurosurgery department treats conditions of the brain, spine, and nervous system. Neurologists focus on non-surgical management while neurosurgeons provide minimally invasive interventions when needed. Our goal is to enhance quality of life through personalized, state-of-the-art, minimally invasive treatments that reduce recovery time and offer optimal safety.",
+        conditionSubtitle: "Our Neurology & Neurosurgery team provides expert diagnosis, treatment, and management for a comprehensive range of neurological conditions, including:",
+        conditionList: ["Amyotrophic Lateral Sclerosis (ALS)", "Arteriovenous Malformations (AVMs) in the brain or spine", "Brain aneurysms", "Cerebrovascular diseases", "Chronic pain syndromes including headache, neck, and back pain", "Epilepsy and seizure disorders", "Huntington’s disease and other hyperkinetic syndromes", "Multiple Sclerosis (MS)", "Muscular dystrophy", "Neurofibromatosis and other neurocutaneous syndromes", "Parkinson’s disease and other neurodegenerative conditions", "Sleep disorders", "Spina bifida and related neurological defects", "Spinal stenosis and myelopathy", "Stroke care and rehabilitation"],
+        testList: ["Neurological exam, patient history, and physical assessment", "MRI and CT neuroimaging", "Cerebrospinal fluid (CSF) analysis", "Electromyography (EMG) and nerve conduction studies", "Evoked potentials (EPs)", "Neuropsychological testing, muscle biopsy, genetic testing"],
+        procedureList: ["Surgical interventions for brain/spinal AVMs, aneurysms, tumours", "Stroke management and rehabilitation", "Minimally invasive spinal fusion for stenosis and myelopathy", "Neurosurgical support for epilepsy and degenerative neurological diseases", "Integrated non-surgical treatment plans for chronic pain syndromes"],
+        faqs: [
+            {
+                question: "What’s the difference between a neurologist and a neurosurgeon?",
+                answer: "Neurologists manage neurological conditions medically; neurosurgeons perform surgeries when needed."
+            },
+            {
+                question: "How is stroke treated here?",
+                answer: "Through acute intervention and a multidisciplinary rehabilitation approach tailored for recovery."
+            },
+            {
+                question: "Are MRI and CT scans safe for diagnosing neurological conditions?",
+                answer: "Yes—they’re essential, non-invasive tools for accurate diagnosis."
+            },
+            {
+                question: "Can chronic headaches be surgically treated?",
+                answer: "Most chronic headaches are managed medically, but surgical options are available for specific structural causes."
+            },
+            {
+                question: "What is the benefit of minimally invasive neurosurgery?",
+                answer: "Smaller incisions, less pain, lower infection risk, shorter hospital stay, and quicker recovery."
+            }
+        ]
     },
     {
         slug: "endocrinology-and-diabetology",
@@ -473,7 +503,41 @@ export const services: ServiceData[] = [
         description: "We manage hormonal and metabolic disorders, including diabetes, thyroid disease, and adrenal conditions. Our specialists work closely with patients to optimize treatment and improve long-term health.",
         image: "/home/diabetes.jpg",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+        overviewText: "Euracare’s Endocrinology & Diabetology department specializes in managing hormone-related conditions and diabetes with a holistic, evidence-based approach. Our clinicians offer preventive diabetic care, diagnostics, and comprehensive treatment plans tailored to the growing needs of modern lifestyles and metabolism-related diseases. Whether it's type 1, type 2, prediabetes, or gestational diabetes, we combine specialist care with seamless access to laboratory and imaging facilities to support long-term wellness.",
+        conditionList: ["Type 1 Diabetes", "Type 2 Diabetes", "Prediabetes", "Gestational Diabetes", "Adrenal gland disorders", "Cholesterol and lipid disorders", "Osteoporosis", "Parathyroid disorders", "Pituitary disorders & Pituitary tumours", "Thyroid cancer", "Thyroid disease"],
+        testList: ["Clinical laboratory tests", "Continuous glucose monitoring (CGM)", "Glycated hemoglobin (HbA1c) test", "LDL (“bad” cholesterol) measurement", "Kidney function assessment", "Eyesight examination", "Cortisol stimulation test", "CT scan", "MRI scan", "MIBG (metaiodobenzylguanidine) scan", "Provocative/Suppression tests", "Saliva test", "Endocrine dynamic testing", "Fine-needle aspiration cytology (FNAC)", "Ultrasound-guided thyroid biopsy"],
+        procedureList: ["Multidisciplinary management of diabetes (lifestyle, medication, surgical options)", "Hormonal disorder evaluation and treatment", "Bone density assessment and osteoporosis management", "Imaging-guided endocrine biopsies (thyroid, adrenal, pituitary)", "Continuous monitoring technologies for precision patient care"],
+        faqs: [
+            {
+                question: "What sugar level indicates diabetes, and how often should patients check their A1C?",
+                answer: "A fasting blood sugar ≥ 126 mg/dL or A1C ≥ 6.5% typically confirms diabetes; prediabetes falls in lower ranges. Every 3–6 months, depending on how well blood sugar levels are managed."
+            },
+            {
+                question: "What is Gestational Diabetes?",
+                answer: "Diabetes diagnosed during pregnancy—it requires careful monitoring and may involve dietary adjustment or insulin therapy."
+            },
+            {
+                question: "Can hormone disorders be treated without surgery?",
+                answer: "Many are managed with medications and monitoring; surgery is reserved for specific tumor-related cases."
+            },
+            {
+                question: "What are the risks of untreated osteoporosis?",
+                answer: "It increases the likelihood of fractures and loss of mobility—early intervention is key."
+            },
+            {
+                question: "Can thyroid disorders be cured?",
+                answer: "Many thyroid conditions, such as hypothyroidism or hyperthyroidism, can be effectively managed with medication or surgery. Some, like thyroid cancer, may be curable with appropriate treatment."
+            },
+            {
+                question: "What are the signs of adrenal gland problems?",
+                answer: "Symptoms may include unexplained weight changes, fatigue, muscle weakness, high or low blood pressure, and mood changes."
+            },
+            {
+                question: " When should I see an endocrinologist?",
+                answer: "If you have unexplained fatigue, sudden weight changes, irregular periods, excessive thirst, or difficulty controlling blood sugar, a referral to an endocrinologist is advised."
+            }
+        ],
+        videoUrls: ["MwXr3txbhxc"]
     },
     {
         slug: "nutrition-and-wellness",
@@ -481,7 +545,32 @@ export const services: ServiceData[] = [
         description: "Our nutritionists provide personalized dietary plans to support weight management, chronic disease prevention, and overall wellness. We combine scientific expertise with practical advice for sustainable results",
         image: "/home/nutri.jpg",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+        overviewText: "At Euracare, our Clinical Nutrition Department offers expert dietary coaching and wellness plans to combat lifestyle diseases and support overall health. Our nutritionists work closely with patients before and after medical procedures, designing customized meal plans that promote optimal outcomes, recovery, and long-term wellbeing. Good nutrition is vital for managing conditions like heart disease, diabetes, obesity, hypertension, thyroid issues, arthritis, and autoimmune disorders.",
+        conditionList: ["Obesity and weight management", "Diabetes and gestational diabetes", "High blood pressure (hypertension)", "High cholesterol and lipid disorders", "Thyroid conditions", "Heart disease", "Arthritis and joint discomfort", "Cognitive support for dementia", "Gut Health"],
+        testList: ["Nutrient level testing", "Body Mass Index (BMI) evaluation", "Cholesterol profile including LDL", "Glycated Hemoglobin (HbA1c) for blood sugar control"],
+        procedureList: ["Personalized dietary consultations", "Tailored meal and wellness plans", "Pre- and post-operative nutrition support", "Long-term lifestyle and diet coaching", "Support for chronic disease nutrition management"],
+        faqs: [
+            {
+                question: "Why is nutrition important for chronic disease?",
+                answer: "Proper nutrition can significantly reduce risks and support management of conditions like diabetes, hypertension, and heart disease."
+            },
+            {
+                question: "Does nutrition matter after surgery?",
+                answer: "Yes — personalized meal planning helps with healing, energy, and a smoother recovery process"
+            },
+            {
+                question: "Can I still eat my favorite foods?",
+                answer: "Yes, but in balanced portions and often healthier preparations—guided by your nutritionist"
+            },
+            {
+                question: "Do you support weight loss through lifestyle changes?",
+                answer: "Absolutely — weight management plans emphasize sustainable diet and exercise habits, not quick fixes"
+            },
+            {
+                question: "How long does consultation take?",
+                answer: "Typically around 45–60 minutes, plus follow-ups to adjust your nutrition plan as needed."
+            }
+        ]
     },
     {
         slug: "breast-surgery",
@@ -521,7 +610,32 @@ export const services: ServiceData[] = [
         description: "Our dermatologists diagnose and treat skin, hair, and nail conditions, offering both medical and aesthetic dermatology services. We use the latest techniques to promote healthy skin and confidence.",
         image: "/home/dermatology.jpg",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+        overviewText: "Euracare’s Dermatology department offers expert diagnosis and treatment for all skin, hair, and nail disorders—whether standalone or linked to systemic illness. Our dermatologists combine clinical precision with modern therapies to deliver comprehensive, patient-focused care.",
+        conditionList: ["Infectious skin diseases", "Blistering disorders", "Connective tissue diseases", "Psoriasis and related conditions", "Photosensitivity reactions", "Cutaneous ulcerations", "Oral mucosal diseases", "Eczema and dermatitis", "Vitiligo", "Pruritus (severe itching)", "Acne and scarring", "Hair disorders", "Skin cancer screening and early detection"],
+        testList: ["Thorough physical examination", "Blood and urine laboratory tests"],
+        procedureList: ["Chemical peels and cosmetic skin treatments"],
+        faqs: [
+            {
+                question: "How do I know if a skin condition requires specialist care?",
+                answer: "Conditions such as persistent rashes, new or changing skin lesions, and suspicious growths should be evaluated by a dermatologist."
+            },
+            {
+                question: "Are chemical peels safe?",
+                answer: "Yes—when performed by trained professionals, peels are safe and effective with minimal downtime."
+            },
+            {
+                question: "Can skin issues indicate other health problems?",
+                answer: "Absolutely—dermatologic signs can reveal systemic conditions like autoimmune diseases or internal illnesses."
+            },
+            {
+                question: "How often should I have a skin cancer screening?",
+                answer: "Annual checks are ideal, especially if you’ve had prior skin issues, light skin, or sun exposure."
+            },
+            {
+                question: "Do you treat hair loss?",
+                answer: "Yes, we address various causes of hair disorders—from genetic to immune-mediated—with tailored therapies."
+            }
+        ]
     },
     {
         slug: "gynaecology",
@@ -529,7 +643,38 @@ export const services: ServiceData[] = [
         description: "We provide comprehensive women’s health services, from routine screenings to advanced gynecologic procedures. Our team supports every stage of life with sensitivity and expertise.",
         image: "/home/gynacology.jpg",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+        overviewText: "Euracare's Gynaecology department delivers expert care for a broad spectrum of women’s health needs, from routine reproductive care to surgical interventions. Every treatment emphasizes accurate diagnosis and gentle recovery in a compassionate setting.",
+        conditionSubtitle: "Our gynecology team provides expert diagnosis and management for a wide range of women’s health concerns, including:",
+        conditionList: ["Menstrual disorders (heavy, irregular, or painful periods)", "Menopause and perimenopause symptoms", "Polycystic ovary syndrome (PCOS)", "Fibroids (benign uterine growths)", "Endometriosis", "Ovarian cysts", "Abnormal vaginal bleeding", "Pelvic pain", "Pelvic inflammatory disease (PID)", "Vaginal infections", "Urinary incontinence and pelvic floor disorders", "Fertility concerns and reproductive health issues", "Early pregnancy complications (including ectopic pregnancy)","Routine cervical cancer screening and management of abnormal Pap smears"],
+        testList: ["Clinical examination", "Ultrasound imaging", "Laboratory tests (hormones, infections)", "Screening procedures (e.g., pap smear)"],
+        procedureSubtitle: "Minimally Invasive (Laparoscopic) Procedures:",
+        procedureList: ["Laparoscopic ovarian cystectomy (removal of cysts from the ovary)", "Laparoscopic myomectomy (removal of fibroids)", "Laparoscopic hysterectomy (removal of the uterus)", "Laparoscopic adhesiolysis (removal of pelvic adhesions)", "Laparoscopic management of ectopic pregnancy"],
+        additionalProcedureSubtitle: "Other Surgical & Diagnostic Procedures:",
+        additionalProcedureList: ["Hysteroscopy (diagnosis and treatment of uterine cavity problems)", "Dilation and curettage (D&C)", "Colposcopy and cervical biopsy (for abnormal Pap smears)", "Endometrial biopsy", "Cervical cerclage (to help prevent preterm birth)", "Pelvic floor repair surgery","Tubal ligation and sterilization procedures"],
+        additionalProcedureSubtitle2: "Non-Surgical & Preventive Care",
+        additionalProcedureList2: ["Menopause management and hormone therapy", "Contraceptive counselling and procedures (IUD insertion, contraceptive implants)", "HPV vaccination", "Well-woman check-ups and preventive health screening"],
+        faqs: [
+            {
+                question: "When should I consult a gynaecologist?",
+                answer: "For issues like irregular cycles, pelvic pain, fertility concerns, or menopausal symptoms."
+            },
+            {
+                question: "Are minimally invasive gynaecologic surgeries available?",
+                answer: "Yes—these reduce recovery time, scarring, and discomfort."
+            },
+            {
+                question: "At what age should routine gynaecological screenings begin?",
+                answer: "Pap smear screenings generally begin at age 21 or earlier if symptoms are present."
+            },
+            {
+                question: "Can fibroids be treated without surgery?",
+                answer: "Some can—but surgical evaluation is often necessary for accurate treatment planning."
+            },
+            {
+                question: "s reproductive health addressed holistically?",
+                answer: "Yes—your care involves physical, hormonal, fertility, and wellness assessments."
+            }
+        ]
     },
     {
         slug: "psychiatry-sleep-therapy",
@@ -537,7 +682,28 @@ export const services: ServiceData[] = [
         description: "We address mental health and sleep disorders with evidence-based care. From anxiety and depression to insomnia, our specialists create personalized treatment plans that restore balance and well-being",
         image: "/home/sleep.jpg",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+        overviewText: "Euracare’s Psychiatry & Sleep Therapy unit combines psychological and medical expertise to treat mental health conditions and sleep disorders. Our holistic approach helps restore mental well-being and improve quality of rest.",
+        conditionList: ["Anxiety and stress", "Depression and mood disorders", "Psychotic illnesses (e.g., schizophrenia)", "Sleep issues (e.g., insomnia, obstructive sleep apnea)", "Workplace-related stress (including corporate wellness"],
+        testList: ["Clinical evaluation and psychiatric assessment", "Diagnostic imaging (MRI, CT, X-ray) when needed"],
+        procedureList: ["Comprehensive psychiatric evaluation and therapy", "Sleep studies (for sleep-related conditions)"],
+        faqs: [
+            {
+                question: "How do I know if my sleeping issues require treatment?",
+                answer: "Persistent insomnia, daytime fatigue, or snoring that disrupts life indicates need for specialized care."
+            },
+            {
+                question: "Can therapy help depression long-term?",
+                answer: "Yes—combined with medical management, psychotherapy offers sustainable improvement."
+            },
+            {
+                question: "What is sleep therapy?",
+                answer: "It’s a structured, multidisciplinary approach to diagnosing and treating sleep disorders"
+            },
+            {
+                question: "Are psychotic disorders treatable?",
+                answer: "Many can be managed with a combination of medication, therapy, and support."
+            }
+        ]
     },
     {
         slug: "rheumatology",
@@ -545,194 +711,32 @@ export const services: ServiceData[] = [
         description: "Our rheumatologists specialize in diagnosing and treating autoimmune and inflammatory joint diseases, including arthritis and lupus. We focus on reducing pain, improving mobility, and preserving long-term health.",
         image: "/home/rheuma.jpg",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+        overviewText: "Euracare’s Rheumatology department specializes in managing autoimmune, inflammatory, and musculoskeletal disorders with precision and compassionate care. Our team uses advanced diagnostics to guide long-term therapy for complex chronic conditions.",
+        conditionList: ["Joint and back pain", "Autoimmune disorders", "Lupus", "Systemic sclerosis", "Inflammatory myositis", "Sjögren’s syndrome", "Mixed connective tissue disease", "Rheumatoid arthritis", "Juvenile arthritis", "Septic arthritis", "Gout", "Osteoarthritis", "Osteoporosis", "Behçet’s disease", "Bursitis", "Tendinitis", "Spondyloarthropathy", "Spondylosis", "Systemic vasculitis", "Fibromyalgia", "Giant cell arteritis (GCA)"],
+        testList: ["Blood tests (including autoimmune serology)", "Joint aspiration", "Cortisone injections", "Physical examination", "Infusion therapy", "X-ray", "Ultrasound", "MRI", "CT scan"],
+        procedureList: ["Joint injections and synovial fluid sampling", "Disease-modifying treatment for autoimmune conditions" ,"Pain management and rehabilitation planning"],
+        faqs: [
+            {
+                question: "How can I tell if my joint pain is rheumatologic?",
+                answer: "Persistent inflammation, stiffness, and tenderness—even after rest—suggest rheumatologic referral."
+            },
+            {
+                question: "Are rheumatologic conditions curable?",
+                answer: "Many conditions are manageable; early detection improves outcomes dramatically."
+            },
+            {
+                question: "Do treatments include medication only?",
+                answer: "No—treatment involves medication, lifestyle changes, physical therapy, and specialist care."
+            },
+            {
+                question: "Can older adults with arthritis improve mobility?",
+                answer: "Yes—through therapy, medication, and personalized joint care strategies."
+            },
+            {
+                question: "What is vasculitis and how is it treated?",
+                answer: "Vasculitis is inflammation of blood vessels; it’s treated with immunosuppression and close monitoring."
+            }
+        ]
     },
-    // {
-    //     slug: "ear-nose-throat",
-    //     title: "Ear, Nose and Throat (ENT)",
-    //     description: "We offer a comprehensive range of ENT services, including diagnosis and treatment of conditions affecting the ear, nose, and throat.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
-    // {
-    //     slug: "endocrinology-and-diabetology",
-    //     title: "Endocrinology and Diabetology",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
-    // {
-    //     slug: "fertility-services",
-    //     title: "Fertility Services",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
-    // {
-    //     slug: "gastroenterology",
-    //     title: "Gastroenterology",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
-    // {
-    //     slug: "general-medicine",
-    //     title: "General Medicine",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
-    // {
-    //     slug: "general-surgery",
-    //     title: "General Surgery",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
-    // {
-    //     slug: "Haematology",
-    //     title: "Haematology",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
-    // {
-    //     slug: "international-patients",
-    //     title: "International Patients",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
-    // {
-    //     slug: "interventinal-cardiology",
-    //     title: "Interventional Cardiology",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
-    // {
-    //     slug: "neurology-neurosurgery",
-    //     title: "Neurology & Neurosurgery",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
-    // {
-    //     slug: "nutritionist",
-    //     title: "Nutritionist",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
-    // {
-    //     slug: "oncology",
-    //     title: "Oncology",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "Oncology is a branch of medical science dealing with tumours, including the origin, development, diagnosis, and treatment of malignant neoplasms. Different types of doctors often work together to create a patient’s overall treatment plan that combines different types of treatments. Euracare provides Surgical Oncology services and cancer treatment using cutting-edge Interventional Radiology modalities. Interventional radiology may also be used to manage metastatic disease from a variety of cancers including those of the breast, colon, rectum, gallbladder, pancreas, lung, oesophagus and stomach, as well as melanoma and sarcoma. Interventional radiologists are specialists trained in using image-guided technology, such as X-rays, CT and MRI",
-    //     testList: ["Biopsy", "MRI", "CT", "X-ray", "Clinical Laboratory", "Ultrasound", "Bronchoscopy", "Endoscopic procedures", "Lumbar puncture", "Pap smear", "Physical examination"],
-    //     conditionList: ["Transarterial chemoembolization", "Radiofrequency ablation (RFA)", "Microwave ablation", "Tumour ablation procedures", "Liver-directed therapies", "Vascular work", "Drainage catheters", "Port and PICC Line Placement", "Pain management", "Lymphatic Interventions"],
-    //     faqs: [
-    //         {
-    //             question: "What is antenatal care, and why is it important?",
-    //             answer: "Antenatal care involves regular medical checkups during pregnancy to monitor the health of both mother and baby. It helps detect and manage potential complications early, ensuring a safe and healthy pregnancy."
-    //         },
-    //         {
-    //             question: "When should I start antenatal visits at Euracare?",
-    //             answer: "We recommend scheduling your first antenatal visit as soon as you suspect or confirm your pregnancy, ideally within the first 8-12 weeks. Early care is crucial for establishing baseline health measurements and identifying any potential risks."
-    //         },
-    //         {
-    //             question: "What services are included in Euracare's antenatal care package?",
-    //             answer: "Our comprehensive package includes regular check-ups, diagnostic screenings, ultrasound scans, blood tests, nutritional guidance, and prenatal education. We also provide personalized care plans based on individual needs."
-    //         },
-    //         {
-    //             question: "Do you offer childbirth education or antenatal classes?",
-    //             answer: "Yes, we offer comprehensive childbirth education classes that cover labor preparation, breathing techniques, pain management options, and newborn care. These classes are designed to help you feel confident and prepared for delivery."
-    //         },
-    //         {
-    //             question: "What should I expect during a postnatal check-up?",
-    //             answer: "Postnatal check-ups include assessment of your recovery, baby's growth and development, breastfeeding support, emotional well-being evaluation, and discussions about contraception and future health planning."
-    //         },
-    //         {
-    //             question: "How soon after delivery should I come for a postnatal visit?",
-    //             answer: "We recommend your first postnatal visit within the first week after delivery, followed by regular check-ups at 2 weeks, 6 weeks, and 3 months postpartum, or as advised by your healthcare provider."
-    //         }
-    //     ]
-    // },
-    // {
-    //     slug: "orthopaedic-services",
-    //     title: "Orthopaedic Services",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
-    // {
-    //     slug: "paediatric-cardiology",
-    //     title: "Paediatric Cardiology",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
-    // {
-    //     slug: "paediatrics",
-    //     title: "Paediatrics",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
-    // {
-    //     slug: "psychiatry-sleep-therapy",
-    //     title: "Psychiatry – Sleep Therapy",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
-    // {
-    //     slug: "pulmonology",
-    //     title: "Pulmonology",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
-    // {
-    //     slug: "radiology",
-    //     title: "Radiology",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
-    // {
-    //     slug: "reconstructive-plastic-surgery",
-    //     title: "Reconstructive & Plastic Surgery",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
-    // {
-    //     slug: "rheumatology",
-    //     title: "Rheumatology",
-    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-    //     image: "/services/dermatology.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    // },
+    
 ];
