@@ -36,7 +36,7 @@ export default function TeamMemberModal({ isOpen, onClose, member }: TeamMemberM
                             leaveTo="opacity-0 scale-95"
                         >
                             <Dialog.Panel className="w-full sm:max-w-[550px] transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                                <div className="relative mb-4 overflow-hidden rounded-t-[12px] bg-gray-200 h-[270px] lg:h-[320px]">
+                                <div className="relative mb-4 overflow-hidden rounded-t-[12px] bg-gray-200 h-[270px] lg:h-[390px]">
                                         <img
                                             src={member.image}
                                             alt={member.name}

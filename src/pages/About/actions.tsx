@@ -2,7 +2,7 @@ export default function ValuesSection() {
   return (
     <section className="px-[16px] py-[60px] lg:px-[80px] items-center lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[95px] ">
       {/* Left Image */}
-      <div className="lg:h-[670px]">
+      <div className="overflow-hidden h-[350px] lg:h-[670px]">
         <img
           src="/about/healthcare.jpg"
           alt="Patients lying on grass"
