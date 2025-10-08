@@ -23,21 +23,23 @@ const PatientTestimonials = () => {
       author: "Mr. Chuka Nwokedi",
       department: "Bariatric Surgery",
       image: "/videos/poster/poster1.png",
-      video: '/videos/testimonial1.mp4'
+      video: 'https://youtu.be/RvaGBWrTxmI'
     },
     {
       id: 2,
-      quote: "Life-Changing Cardiology Support",
-      author: "Halima Yusuf",
-      department: "Interventional Cardiology",
-      image: "/home/test-img.png"
+      quote: "Exceptional Service and Professionalism",
+      author: "Dr. Money Joy",
+      department: "Bariatric Surgery",
+      image: "/videos/poster/poster2.png",
+      video: "https://youtu.be/hILYTADm0Zw"
     },
     {
       id: 3,
-      quote: "Exceptional Service and Professionalism",
-      author: "Mrs. Lola Adebayo",
-      department: "General Medicine",
-      image: "/home/test-img.png"
+      quote: "Doubt Overcome, Health Restored",
+      author: "",
+      department: "Bariatric Surgery",
+      image: "/videos/poster/poster3.png",
+      video: "https://youtu.be/L-V8gvI-enM"
     }
   ];
 
